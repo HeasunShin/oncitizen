@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시판테스트</title>
+    <link rel="stylesheet" href="../public/scss/common.css" />
+    <link rel="stylesheet" href="../public/scss/sub.css" />
+  </head>
+  <body>
+    <div class="wrap sub_notice">
+      <header>
+        <div class="inner">
+          <h1 class="logo">ON:시민회</h1>
+        </div>
+      </header>
+      <main>
+        <section class="board">
+          <div class="board__inner">
+            <div class="board__header">
+              <h2 class="board__title">공지사항</h2>
+
+              <div class="board__search">
+                <select class="board__select">
+                  <option>제목</option>
+                  <option>내용</option>
+                  <option>작성자</option>
+                </select>
+                <input
+                  type="text"
+                  class="board__input"
+                  placeholder="검색어 입력"
+                />
+                <button class="board__search-btn">검색</button>
+              </div>
+            </div>
+
+            <div class="board__table-wrap">
+              <table class="board-table">
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="번호">공지</td>
+                    <td data-label="제목" class="board-table__title">
+                      <a href="#">사이트 점검 안내</a>
+                    </td>
+                    <td data-label="작성자">관리자</td>
+                    <td data-label="작성일">2026-02-16</td>
+                    <td data-label="조회">128</td>
+                  </tr>
+
+                  <tr>
+                    <td data-label="번호">12</td>
+                    <td data-label="제목" class="board-table__title">
+                      <a href="#">신규 서비스 오픈 안내</a>
+                    </td>
+                    <td data-label="작성자">홍길동</td>
+                    <td data-label="작성일">2026-02-15</td>
+                    <td data-label="조회">54</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="board__footer">
+              <div class="board__pagination">
+                <a href="#" class="board__page board__page--active">1</a>
+                <a href="#" class="board__page">2</a>
+                <a href="#" class="board__page">3</a>
+              </div>
+
+              <div class="board__write">
+                <a href="#" class="board__write-btn">글쓰기</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+    </div>
+  </body>
+</html>

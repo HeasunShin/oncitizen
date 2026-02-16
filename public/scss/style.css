@@ -1,0 +1,26 @@
+.wrap main section .inner {
+  padding: 50px 0;
+}
+.wrap main section.notice_test {
+  background-color: #e7e7e7;
+}
+.wrap main section.notice_test .inner .content {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+.wrap main section.notice_test .inner .content .book {
+  width: 30%;
+  height: 300px;
+  border: 2px solid #999;
+}
+.wrap main section.notice_test .inner .book_btn {
+  display: flex;
+  justify-content: center;
+}
+.wrap main section.notice_test .inner .book_btn a {
+  background-color: #999;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

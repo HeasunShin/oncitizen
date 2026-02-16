@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.wrap header {
+  background-color: lightskyblue;
+  height: 100px;
+}
+.wrap header .inner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .wrap header {
+    border: 1px solid red;
+  }
+  .wrap header .inner {
+    padding: 0 20px;
+  }
+}/*# sourceMappingURL=common.css.map */

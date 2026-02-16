@@ -1,0 +1,206 @@
+/* =========================
+   board
+========================= */
+.board {
+  padding: 60px 20px;
+  background: #f8f8f8;
+
+  &__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* header */
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  /* search */
+  &__search {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__select,
+  &__input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  &__search-btn {
+    padding: 8px 14px;
+    border: none;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* table wrap */
+  &__table-wrap {
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  /* footer */
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  &__pagination {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__page {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #333;
+
+    &--active {
+      background: #333;
+      color: #fff;
+    }
+  }
+
+  &__write-btn {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #007bff;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/* =========================
+   table
+========================= */
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 14px;
+
+  th {
+    background: #f1f1f1;
+    padding: 12px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__title {
+    text-align: left;
+
+    a {
+      text-decoration: none;
+      color: #333;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  tbody tr:hover {
+    background: #fafafa;
+  }
+}
+
+/* =========================
+   tablet
+========================= */
+@media (max-width: 1024px) {
+  .board {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    &__footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+}
+
+/* =========================
+   mobile
+========================= */
+@media (max-width: 768px) {
+  .board-table {
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+    }
+
+    tr {
+      display: block;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      background: #fff;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border: none;
+      font-size: 13px;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #666;
+    }
+
+    &__title {
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .board {
+    &__footer {
+      align-items: center;
+    }
+
+    &__pagination {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__write {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__write-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
